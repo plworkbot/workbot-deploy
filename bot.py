@@ -8,9 +8,9 @@ if creds_b64:
 else:
     raise RuntimeError("GOOGLE_CREDS_B64 environment variable not found")
 from aiogram import Bot, Dispatcher, executor, types
-from config import BOT_TOKEN
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 from sheets import add_user
-
+#print("BOT_TOKEN =", BOT_TOKEN)
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot)
 
