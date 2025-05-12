@@ -1,2 +1,2 @@
-BOT_TOKEN = "your_telegram_bot_token"
+BOT_TOKEN = 7429692972:AAFN3XRHUrAb54-TmLeDfk1bqXn4tPrAgiU
 GOOGLE_SHEET_NAME = "WorkBot-Users"
