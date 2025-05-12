@@ -1,6 +1,3 @@
-git add .
-git commit -m "Add creds.json creation from env"
-git push origin main
 import os
 import base64
 
