@@ -1,3 +1,15 @@
+git add .
+git commit -m "Add creds.json creation from env"
+git push origin main
+import os
+import base64
+
+creds_b64 = os.getenv("GOOGLE_CREDS_B64")
+if creds_b64:
+    with open("credentials.json", "wb") as f:
+        f.write(base64.b64decode(creds_b64))
+else:
+    raise RuntimeError("GOOGLE_CREDS_B64 environment variable not found")
 from aiogram import Bot, Dispatcher, executor, types
 from config import BOT_TOKEN
 from sheets import add_user
